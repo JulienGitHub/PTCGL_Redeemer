@@ -9,6 +9,7 @@ Change _username and _password to your own credentials
 
 _username = "USERNAME"
 
+
 _password = "PASSWORD"
 
 
@@ -17,4 +18,6 @@ I do not have codes to test, but there's 5% chance this script is working.
 
 
 Not affiliated with, sponsored or endorsed by, or in any way associated with The Pokemon Company International Inc/Nintendo/Creatures Inc./GAME FREAK Inc.
+
+
 Use at your own risks.
