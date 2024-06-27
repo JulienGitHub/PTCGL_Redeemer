@@ -1,5 +1,4 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from seleniumbase import Driver
 from selenium.webdriver.common.by import By
 import time
 
@@ -8,23 +7,27 @@ _username = "USERNAME"
 _password = "PASSWORD"
 
 #init selenium
-service = Service()
-options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(service=service, options=options)
-driver.maximize_window()
+driver = Driver(uc=True)
 
 #load redeem page
 driver.get('https://redeem.tcg.pokemon.com/')
 
 #wait 2 seconds (redirection to the login page)
-time.sleep(2)
+time.sleep(5)
 
 #find email and password fields, fill them with your data
 userID = driver.find_element(By.ID, "email")
+userID.click()
+time.sleep(2)
 userID.send_keys(_username)
+#wait 2 seconds (redirection to the login page)
+time.sleep(2)
 password = driver.find_element(By.ID, "password")
-password.send_keys(_password)
+password.click()
+time.sleep(2)
 
+password.send_keys(_password)
+time.sleep(2)
 #find Log In button and click on it
 login_button = driver.find_element(By.CSS_SELECTOR, "[id='accept']")
 login_button.click()
