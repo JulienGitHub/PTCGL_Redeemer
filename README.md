@@ -1,6 +1,6 @@
 # PTCGL Python Redeemer
 
-Uses Selenium to redeem codes from the Pokémon webpage : pip install selenium
+Uses Selenium to redeem codes from the Pokémon webpage : pip install seleniumbase
 
 A codes.txt file is needed in the same directory (1 code per line)
 
